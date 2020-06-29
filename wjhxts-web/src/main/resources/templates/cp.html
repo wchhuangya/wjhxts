@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>彩票出奖结果</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+</head>
+<body>
+    <h1 style="text-align: center; height: 100px; line-height: 100px;">一票在手，世界我有</h1>
+    <div style="margin: 0 auto; width: 800px;">
+        <form class="layui-form" action="" lay-verify="cpForm">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">请选择彩种</label>
+                <div class="layui-input-block">
+                    <select lay-filter="cdvs" id="cdvs" name="cdvs" lay-verify="required">
+                        <option value="">请选择彩种</option>
+                        <option value="0">大乐透</option>
+                        <option value="1">双色球</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">红球个数</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="redNum" id="redNum" lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">蓝球个数</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="blueNum" id="blueNum" lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">生成注数</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="nums" id="nums" lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="okBtn">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary" lay-filter="cancelBtn" id="cancelBtn">重置</button>
+                </div>
+            </div>
+            <div style="padding: 10px; background-color: #f2f2f2; display: none;" id="msgDiv">
+                <div class="layui-card">
+                    <div class="layui-card-header">精彩人生，从此开始</div>
+                    <div class="layui-card-body" id="msgBody">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script th:src="@{/layui/layui.js}"></script>
+    <script th:src="@{/js/wUtils.js}"></script>
+    <script th:src="@{/js/cp.js}"></script>
+    <script>
+        layui.use(['form', 'layedit', 'laydate', 'jquery'], function () {
+            var form = layui.form
+                ,$ = layui.jquery;
+
+            form.on('select(cdvs)', function (data) {
+                var selected = data.value;
+                if (selected === '0') {
+                    $('#redNum').val('5');
+                    $('#blueNum').val('2');
+                    $('#nums').val('5');
+                } else if (selected === '1') {
+                    $('#redNum').val('6');
+                    $('#blueNum').val('1');
+                    $('#nums').val('5');
+                }
+                $('#msgDiv').hide();
+            });
+            form.on('submit(okBtn)', function (data) {
+                var res, field = data.field;
+                res = (field.cdvs === '0' ? new DLT() : new SSQ());
+                var res_arr = res.generateRes(parseInt(field.redNum), parseInt(field.blueNum), parseInt(field.nums)).res;
+                var realRes = '';
+                for (var i = 0; i < res_arr.length; i++) {
+                    for (var j = 0; j < res_arr[i].length; j++) {
+                        if (res_arr[i][j].toString().length === 1)
+                            res_arr[i][j] = ' ' + res_arr[i][j];
+                        else
+                            res_arr[i][j] = '' + res_arr[i][j];
+                    }
+                }
+
+                for (var i = 0; i < res_arr.length; i++)
+                    realRes += res_arr[i].join("  ,  ") + '<br/>';
+
+                $('#msgBody').html(realRes);
+                $('#msgDiv').show();
+
+                return false;
+            });
+            $('#cancelBtn').on('click', function () {
+                $('#msgDiv').hide();
+            });
+        });
+    </script>
+</body>
+</html>
