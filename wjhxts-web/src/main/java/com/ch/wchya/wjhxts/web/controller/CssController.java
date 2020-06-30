@@ -23,4 +23,9 @@ public class CssController {
     public String overflow() {
         return "css/overflow_hover";
     }
+
+    @GetMapping("/a/nav")
+    public String nav() {
+        return "css/a_nav";
+    }
 }
