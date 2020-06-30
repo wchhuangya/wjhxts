@@ -18,4 +18,9 @@ public class CssController {
     public String smart() {
         return "css/form_smart";
     }
+
+    @GetMapping("/overflow/hover")
+    public String overflow() {
+        return "css/overflow_hover";
+    }
 }
