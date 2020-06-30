@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能表单练习</title>
+    <style>
+        .main {
+            box-sizing: border-box;
+            width: 350px;
+            margin: 50px auto 0;
+            background-color: #acb645;
+            border-radius: 5px;
+            padding: 10px 15px 10px;
+        }
+        .section {
+            font-size: 12px;
+        }
+        .section p {
+            margin: 5px 0px 5px;
+        }
+        .section p.title {
+            font-weight: bold;
+            font-size: 14px;
+            padding-top: 15px;
+        }
+        .section p:not(.title) {
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            padding: 1px 20px 5px 10px;
+            background-color: #d6dda4;
+        }
+        .section p span {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100px;
+        }
+        .section p input {
+            box-sizing: border-box;
+            width: 188px;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <section class="section">
+            <p class="title">第一步，详细信息</p>
+            <p>
+                <span>姓名</span><input type="text" placeholder="请输入姓名">
+            </p>
+            <p>
+                <span>电话</span><input type="text" minlength="11" maxlength="11" placeholder="133333333333">
+            </p>
+            <p>
+                <span>facebook主页</span><input type="url" placeholder="http://www.facebook.com">
+            </p>
+        </section>
+        <section class="section">
+            <p class="title">
+                第二步，收货地址
+            </p>
+            <p>
+                <span>详细地址</span><textarea name="detailAddr" id="detailAddr" cols="20" rows="5"></textarea>
+            </p>
+            <p>
+                <span>邮编</span><input type="text" placeholder="请输入邮编">
+            </p>
+        </section>
+        <section class="section">
+            <p class="title">
+                第三步，银行卡信息
+            </p>
+            <p>
+                <span></span><input type="text">
+            </p>
+            <p>
+                <span></span><input type="text">
+            </p>
+            <p>
+                <span></span><input type="text">
+            </p>
+        </section>
+    </main>
+</body>
+</html>
