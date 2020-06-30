@@ -28,4 +28,9 @@ public class CssController {
     public String nav() {
         return "css/a_nav";
     }
+
+    @GetMapping("/li/a/news")
+    public String news() {
+        return "css/li_a_news";
+    }
 }
