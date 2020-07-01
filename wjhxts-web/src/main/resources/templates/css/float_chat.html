@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用float属性制作的聊天窗口</title>
+    <style>
+        html, body {
+            height: 100%; margin: 0; padding: 0;
+        }
+        body > div {
+            height: 100%;
+            margin-top: 15px;
+            overflow: auto;
+            overflow-style: initial;
+        }
+        .main {
+            border: 1px solid black;
+            height: 400px;
+            overflow-y: auto;
+            overflow-style: auto;
+        }
+        .oper {
+            height: 100px;
+            padding-top: 15px;
+        }
+        .main, .oper {
+            width: 300px;
+            margin: auto;
+        }
+        .btnB {
+            float: right;
+        }
+        .aHtml,.bHtml {
+            width: 120px;
+            color: #000;
+            margin: 5px 0;
+        }
+        .aHtml {
+            background: orange;
+            float: left;
+        }
+        .bHtml {
+            background: yellow;
+            float: right;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            clear: both;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="main">
+            <ul class="uul"></ul>
+        </div>
+        <div class="oper">
+            <input type="button" value="A发消息" class="btnA">
+            <input type="button" value="B发消息" class="btnB">
+        </div>
+    </div>
+    <script>
+        var aBtn = document.getElementsByClassName('btnA')[0];
+        var bBtn = document.getElementsByClassName('btnB')[0];
+        var uul = document.getElementsByClassName('uul')[0];
+
+        aBtn.onclick = function () {
+            var aHtml = document.createElement('li');
+            aHtml.className = 'aHtml';
+            aHtml.appendChild(document.createTextNode('A说了一句'));
+            uul.appendChild(aHtml);
+            console.log(aHtml);
+        };
+        bBtn.onclick = function () {
+            var bHtml = document.createElement('li');
+            bHtml.className = 'bHtml';
+            bHtml.appendChild(document.createTextNode('B说了一句'));
+            uul.appendChild(bHtml);
+        };
+    </script>
+</body>
+</html>

@@ -33,4 +33,9 @@ public class CssController {
     public String news() {
         return "css/li_a_news";
     }
+
+    @GetMapping("/float/chat")
+    public String chat() {
+        return "css/float_chat";
+    }
 }
