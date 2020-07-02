@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>字体图标-阿里巴巴</title>
+    <link rel="stylesheet" th:href="@{/font/iconfont.css}">
+    <style>
+        * {
+            list-style: none;
+        }
+        span:before {
+            margin-right: 5px;
+        }
+        .iconfont {
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><span class="iconfont icon-auto">这是一辆小汽车</span></li>
+        <li><span class="iconfont icon-bussiness-man">这是一个商人</span></li>
+        <li><span class="iconfont icon-data">这是一个</span></li>
+        <li><span class="iconfont icon-rmb">这是一个人民币符号</span></li>
+        <li><span class="iconfont icon-favorites-fill">这是一个慢慢的爱心</span></li>
+        <li><span class="iconfont icon-play-fill">这是一个满满的播放</span></li>
+        <li><span class="iconfont icon-prompt-fill">这是一个满满的提示</span></li>
+    </ul>
+</body>
+</html>

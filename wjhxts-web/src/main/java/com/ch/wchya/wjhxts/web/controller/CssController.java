@@ -43,4 +43,9 @@ public class CssController {
     public String beancms() {           // 仿作 beancms 网站
         return "css/layout_beancms";
     }
+
+    @GetMapping("/pic/iconfont")
+    public String iconFont() {
+        return "css/pic_iconfont";
+    }
 }
