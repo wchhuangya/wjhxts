@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作 beancms 网站结构</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #header {
+            width: 100%; height: 60px; background: #e2603b;
+        }
+        #title {
+            width: 1050px; height: 60px; background: #d8d9dd;
+            margin: auto;
+        }
+        #banner {
+            width: 100%; height: 300px; background: #7573d4;
+        }
+        #unknow {
+            width: 1050px; height: 180px; background: #e86ca4;
+            overflow: auto; margin: auto;
+        }
+        #unknow .item {
+            float: left; width: 174px; height: 180px;
+            border-right: 1px dotted #ddd;
+        }
+        #unknow .item.last {
+            border: none;
+        }
+        #case {
+            width: 100%; height: 390px; background: #f1f1f1;
+        }
+        #case>div {
+            width: 1050px; margin: auto;
+        }
+        #case .case-name {
+            height: 60px; line-height: 50px; color: #333; font-size: 24px;
+        }
+        #case .case-item {
+            overflow: auto;
+        }
+        #case .case-x {
+            width: 343px; height: 280px; float: left; background: #abc24d;
+        }
+        #case .mg {
+            margin: 0 10px;
+        }
+        #case .case-view {
+            height: 50px; line-height: 40px; color: #888; text-align: center; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="title"></div>
+    </div>
+    <div id="banner"></div>
+    <div id="unknow">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item last"></div>
+    </div>
+    <div id="case">
+        <div class="case-name">Case</div>
+        <div class="case-item">
+            <div class="case-x"></div>
+            <div class="case-x mg"></div>
+            <div class="case-x"></div>
+        </div>
+        <div class="case-view">查看更多+</div>
+    </div>
+</body>
+</html>

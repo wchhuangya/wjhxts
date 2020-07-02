@@ -38,4 +38,9 @@ public class CssController {
     public String chat() {
         return "css/float_chat";
     }
+
+    @GetMapping("/layout/beancms")
+    public String beancms() {           // 仿作 beancms 网站
+        return "css/layout_beancms";
+    }
 }
