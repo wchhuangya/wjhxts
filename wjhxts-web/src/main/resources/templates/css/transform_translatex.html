@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>动画-位移效果</title>
+    <style>
+        .box {
+            width: 200px; height: 350px; text-align: center;
+            position: relative; margin: auto; overflow: hidden;
+        }
+        .bg {
+            width: 200px; height: 240px; float: left;
+        }
+        span {
+            transition: 1s;
+            position: absolute; left: -100px;
+        }
+        .first {
+            top: 120px;
+        }
+        .second {
+            top: 140px;
+        }
+        .third {
+            top: 160px;
+        }
+        .box:hover span {
+            transform: translateX(120px);
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img th:src="@{/img/css/translate_bg.png}" alt="炫酷背景" class="bg">
+        <span class="first">温柔的星空</span>
+        <span class="second">应该让你感动</span>
+        <span class="third">我在你身后</span>
+    </div>
+</body>
+</html>

@@ -48,4 +48,9 @@ public class CssController {
     public String iconFont() {
         return "css/pic_iconfont";
     }
+
+    @GetMapping("/transform/translatex")
+    public String translateX() {
+        return "css/transform_translatex";
+    }
 }
