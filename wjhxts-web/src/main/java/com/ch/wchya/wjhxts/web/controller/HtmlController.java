@@ -18,4 +18,9 @@ public class HtmlController {
     public String intro() {
         return "html/hn-p_intro";
     }
+
+    @GetMapping("/uloldl/menu")
+    public String menu() {
+        return "html/uloldl_menu";
+    }
 }
