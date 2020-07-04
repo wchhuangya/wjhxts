@@ -23,4 +23,9 @@ public class HtmlController {
     public String menu() {
         return "html/uloldl_menu";
     }
+
+    @GetMapping("/table/course")
+    public String course() {
+        return "html/table_course";
+    }
 }
