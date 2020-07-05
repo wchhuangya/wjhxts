@@ -53,4 +53,9 @@ public class CssController {
     public String translateX() {
         return "css/transform_translatex";
     }
+
+    @GetMapping("/border/shape")
+    public String shape() {
+        return "css/border_shape";
+    }
 }

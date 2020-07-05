@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border-三角形</title>
+    <style>
+        body { background: blue; }
+        div {
+            display: inline-block; margin: 0 20px;
+        }
+        #shape1 {
+            width: 0px; height: 0px;
+            border-right: 5px solid red;
+            border-left: 5px solid transparent;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        #shape2 {
+            width: 0px; height: 0px;
+            border-right: 5px solid transparent;
+            border-left: 5px solid red;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        #shape3 {
+            width: 0px; height: 0px;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            border-top: 5px solid red;
+            border-bottom: 5px solid transparent;
+        }
+        #shape4 {
+            width: 0px; height: 0px;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="shape1"></div>
+    <div id="shape2"></div>
+    <div id="shape3"></div>
+    <div id="shape4"></div>
+</body>
+</html>
