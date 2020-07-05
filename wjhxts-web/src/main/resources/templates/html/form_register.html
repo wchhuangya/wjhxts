@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单-注册页面练习</title>
+</head>
+<body>
+    <form action="">
+        <p>
+            <label for="email">电子邮箱：</label><input type="email" id="email">
+        </p>
+        <p>
+            <label for="password">设置密码：</label><input type="password" id="password">
+        </p>
+        <p>
+            <label for="username">真实姓名：</label><input type="text" id="username">
+        </p>
+        <p>
+            <label>性别：</label>
+            <label for="mail">男</label><input type="radio" id="mail" name="sex">
+            <label for="femail">女</label><input type="radio" id="femail" name="sex">
+        </p>
+        <p>
+            <label>生日</label>
+            <select>
+                <option value="" selected disabled>生日</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+            </select>
+            年
+            <select name="">
+                <option value="" selected disabled>--</option>
+                <option value="1月">1月</option>
+                <option value="2月">2月</option>
+                <option value="3月">3月</option>
+            </select>
+            月
+            <select name="">
+                <option value="01" selected disabled>01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+            </select>
+            日
+        </p>
+        <p><a href="#">为什么要填写我的生日</a></p>
+        <p>
+            <label>我现在</label>
+            <select name="">
+                <option value="">选择身份</option>
+                <option value="">法师</option>
+                <option value="">羽芒</option>
+            </select>
+            <span>（非常重要）</span>
+        </p>
+        <p>
+            <label for="valid">验证码</label><input type="input" oninput="value=value.replace(/[^\d]/g,'')" maxlength="4" id="valid">
+        </p>
+        <p>
+            <label></label><button>立即注册</button>
+        </p>
+    </form>
+</body>
+</html>

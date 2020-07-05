@@ -28,4 +28,9 @@ public class HtmlController {
     public String course() {
         return "html/table_course";
     }
+
+    @GetMapping("/form/register")
+    public String register() {
+        return "html/form_register";
+    }
 }
