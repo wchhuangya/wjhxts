@@ -94,15 +94,29 @@ CP.prototype.generateRes = function (/* Number */r_nums, /* Number */b_nums, /* 
             break;
     }
 
-    // 将生成的红球与蓝球拼接到一起
+    // 将生成的红球与蓝球拼接到一起（第一版，红球与蓝球按顺序拼接）
+    // for (var i = 0; i < res.reds.length; i++) {
+    //     res.res.push(res.reds[i].concat(res.blues[i]));
+    // }
+
+    // 将生成的红球与蓝球拼接到一起（第二版，红球与蓝球随机拼接）
+    var nums_array = [];
+    while (true) {
+        var rr_num = new WUtils().random_MinToMaxInteger(0, res.reds.length);
+        if (nums_array.indexOf(rr_num) >= 0)
+            continue;
+        else
+            nums_array.push(rr_num);
+        if (nums_array.length === res.reds.length)
+            break;
+    }
     for (var i = 0; i < res.reds.length; i++) {
-        res.res.push(res.reds[i].concat(res.blues[i]));
+        res.res.push(res.reds[i].concat(res.blues[nums_array[i]]));
     }
     return res;
 };
 
 CP.prototype.checkRes = function (res, reds, blues) {
-    // TODO 下次修改时，红球与蓝球随机拼接
     if (res.reds.length > 0) {
         for (var i = 0; i < res.reds.length; i++) {
             for (var j = 0; j < reds.length; j++) {
