@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position-下拉菜单覆盖其它</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul {list-style: none;}
+
+        div {width: 80px; height: 30px; margin: 20px auto; border: 1px solid black; line-height: 30px; position: relative; }
+        ul { width: 80px; border: 1px solid black; position: absolute; top: 30px; left: -1px; display: none; background: white;}
+        div:hover ul {display: block; z-index: 1; cursor: pointer;}
+        div ul li:hover {background: gray;}
+        p {text-align: center;}
+    </style>
+</head>
+<body>
+    <div>
+        卖家中心
+        <ul>
+            <li>列表项1</li>
+            <li>列表项2</li>
+            <li>列表项3</li>
+            <li>列表项4</li>
+        </ul>
+    </div>
+    <p>天黑黑会不会让我忘了你是谁夜越黑梦违背有谁肯安慰</p>
+</body>
+</html>

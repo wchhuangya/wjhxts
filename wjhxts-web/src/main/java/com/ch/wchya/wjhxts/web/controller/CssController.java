@@ -63,4 +63,9 @@ public class CssController {
     public String nested() {
         return "css/box_nested";
     }
+
+    @GetMapping("/position/menu")
+    public String menu() {
+        return "css/position_menu";
+    }
 }
