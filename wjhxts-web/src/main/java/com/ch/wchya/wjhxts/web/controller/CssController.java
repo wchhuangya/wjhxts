@@ -68,4 +68,9 @@ public class CssController {
     public String menu() {
         return "css/position_menu";
     }
+
+    @GetMapping("/zshe/bgplay")
+    public String youkulist() {
+        return "css/zshe_bgplay";
+    }
 }
