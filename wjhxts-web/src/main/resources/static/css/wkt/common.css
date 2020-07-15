@@ -12,13 +12,16 @@ img {display: inline-block;}
 
 #head_title {height: 48px; border-bottom: 2px solid #DBAA30; background: #1D2528;}
 #head_title title {height: 48px;}
-#head_title .logo img {width: 116px; height: 44px; vertical-align: middle;}
+#head_title .logo img {width: 116px; height: 42px; vertical-align: middle;}
 #head_title .logo span {display: inline-block; height: 48px; line-height: 48px; color: #BABABA; font-size: 18px;}
 #head_title .uinfo li {float: left; color: white; margin-left: 20px; height: 48px; line-height: 48px;}
+#head_title .uinfo li a {font-size: 14px; line-height: 21px;}
 
 #head_menu {width: 100%; background: black; height: 60px;}
 #head_menu ul {height: 60px; line-height: 60px;}
 #head_menu ul li {float: left; color: white; text-align: center;}
 #head_menu ul li a {width: 158px; display: inline-block; color: white; font-size: 18px; line-height: 27px; border-left: 1px solid #666;}
 #head_menu ul li a.last {border-right: 1px solid #666;}
+#head_menu ul li a:hover {color: #DBAA30;}
+#head_menu .active {color: #DBAA30;}
 
