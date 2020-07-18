@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>博文尚美首页练习</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul,ol {list-style: none;}
+        h1,h2,h3 {font-size: 16px;}
+        a {text-decoration: none;}
+        img {border: none;}
+        .fluid {width: 100%;}
+        .container {width: 1082px; margin: 0 auto;}
+        .l {float: left;}
+        .r {float: right;}
+        .clear:after {content: ''; display: block; clear: both;}
+
+        #head {height: 80px; background: white;}
+        #head img {margin-top: 19px;}
+        #head ul li {float: left; height: 80px; line-height: 80px;}
+        #head ul li a {color: #646464; display: inline-block; margin-left: 42px; font-weight: bold; }
+
+        #banner {height: 470px; position: relative; overflow: hidden;}
+        #banner img {display: block; width: 100%; height: 100%;}
+        #banner ul {position: absolute; bottom: 20px; left: 50%;}
+        #banner ul li {float: left; width: 12px; height: 12px; border-radius: 12px; border: 2px solid white; margin: 0 6px; cursor: pointer;}
+        #banner ul li:hover {background: white;}
+        #banner .active {background: white;}
+
+        #service {height: 397px; color: #363636; box-sizing: border-box;}
+        .title {font-size: 20px; line-height: 30px; text-align: center; background: url(/img/bwum/service_bg.png) no-repeat center center; margin-top: 60px;}
+        .sub-title {color: #9f9f9f; text-align: center; font-size: 14px; font-weight: bold; margin-top: 11px;}
+        #service h3 {margin-top: 34px; font-size: 18px; font-weight: bold; color: #434343;}
+        #service p {text-align: center; color: #808080; font-size: 14px; margin-top: 11px; line-height: 18px;}
+        #service .service-item {margin-top: 35px;}
+        #service .service-item li {float: left; width: 270px; box-sizing: border-box; text-align: center;}
+
+        #customer {height: 456px; background: #f9f9f9; box-sizing: border-box;}
+        #customer .container {padding-top: 54px;}
+        #customer h2 {color: #66c5b4; letter-spacing: 5px; text-align: center; margin-top: 0;}
+        #customer ul {margin-top: 40px;}
+        #customer ul li {float: left; width: 340px; height: 181px; margin-right: 20px;}
+        #customer .more {display: block; margin: 38px auto 0 auto; width: 176px; height: 36px; background: #66c5b4; border-radius: 30px; line-height: 36px; text-align: center; color: white; cursor: pointer; font-size: 14px;}
+
+        #news{ min-height:450px; overflow: hidden;}
+        #news .area_title{ margin-top:65px;}
+        #news dl{ margin-top:48px;}
+        #news dt{ width:234px;}
+        #news dd{ width:846px;}
+        #news .news_list{ width:100%;}
+        #news .news_list li{ width:50%; float: left; margin-bottom: 48px;}
+        #news .news_date{ width:71px; height:70px; border-right:1px solid #DCDCDC; text-align: center;}
+        #news .news_date i{ color:#66C5B4; font-size:39px; display:block; font-weight: bold;}
+        #news .news_date span{ color:#999999; font-size:20px; line-height: 36px;}
+        #news .news_text{ width:310px; margin-left:20px;}
+        #news .news_text h3{ font-size:14px;}
+        #news .news_text h3 a{ color:#3F3F3F;}
+        #news .news_text p{ color:#A4A4A4; font-size:12px; line-height: 21px; margin-top:17px;}
+
+        #foot {height: 54px; background: #66c5b4; color: white; font-size: 12px;}
+        #foot .container {height: 54px;}
+        #foot p {height: 54px; line-height: 54px;}
+        #foot ul {height: 54px; line-height: 54px;}
+        #foot ul li {float: left; text-align: center;}
+        #foot ul li a {border-right: 1px solid white; color: white; width: 79px; display: inline-block;
+            font-size: 12px; line-height: 14px; }
+        #foot .last {border-right: none;}
+    </style>
+</head>
+<body>
+    <div id="main" class="fluid">
+        <div id="head" class="container">
+            <img th:src="@{/img/bwum/logo.png}" alt="博文尚美" class="l">
+            <ul class="r">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PROTFOLIO</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div id="banner" class="fluid">
+            <a href="#"><img th:src="@{/img/bwum/banner.png}" alt="轮播1"></a>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div id="service" class="container">
+            <h2 class="title">服务范围</h2>
+            <p class="sub-title">OUR SERVICES</p>
+            <div class="service-item">
+                <ul>
+                    <li>
+                        <a href=""><img th:src="@{/img/bwum/web.png}" alt="网站"></a>
+                        <h3>1.WEB DESIGN</h3>
+                        <p>企业品牌网站设计/手机网站制作<br>
+                            动画网站创意设计</p>
+                    </li>
+                    <li>
+                        <a href=""><img th:src="@{/img/bwum/graphic.png}" alt="设计"></a>
+                        <h3>2.GRAPHIC DESIGN</h3>
+                        <p>标志logo设计/产品宣传册设计<br>
+                            企业广告/海报设计</p>
+                    </li>
+                    <li>
+                        <a href=""><img th:src="@{/img/bwum/e-business.png}" alt="电子购物"></a>
+                        <h3>3.E-BUSINESS PLAN</h3>
+                        <p>淘宝/天猫装修设计及运营推广<br>
+                            企业微博、微信营销</p>
+                    </li>
+                    <li>
+                        <a href=""><img th:src="@{/img/bwum/mail.png}" alt="电邮"></a>
+                        <h3>4.MAILBOXAGENTS</h3>
+                        <p>腾讯/网易企业邮箱品牌代理<br>
+                            个性化邮箱定制开发</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="customer" class="fluid">
+            <div class="container">
+                <h2 class="title">{客户案列}</h2>
+                <p class="sub-title">With the best professional technology, to design the best innovative web site</p>
+                <ul class="clear">
+                    <li><a href=""><img th:src="@{/img/bwum/custom2.png}" alt="客户2"></a></li>
+                    <li><a href=""><img th:src="@{/img/bwum/custom1.png}" alt="客户1"></a></li>
+                    <li><a href=""><img th:src="@{/img/bwum/custom3.png}" alt="客户3"></a></li>
+                </ul>
+                <a class="more">VIEW MORE</a>
+            </div>
+        </div>
+        <div id="news" class="container">
+            <div class="area_title">
+                <h2>最新资讯</h2>
+                <p>TEH LATEST NEWS</p>
+            </div>
+            <dl>
+                <dt class="l">
+                    <img th:src="@{/img/bwum/news.png}" alt="">
+                </dt>
+                <dd class="l">
+                    <ul class="news_list">
+                        <li>
+                            <div class="news_date l">
+                                <i>09</i>
+                                <span>Jan</span>
+                            </div>
+                            <div class="news_text l">
+                                <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                                <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                                    首页，更不用说进首页前三了。那么网站优...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="news_date l">
+                                <i>09</i>
+                                <span>Jan</span>
+                            </div>
+                            <div class="news_text l">
+                                <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                                <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                                    首页，更不用说进首页前三了。那么网站优...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="news_date l">
+                                <i>09</i>
+                                <span>Jan</span>
+                            </div>
+                            <div class="news_text l">
+                                <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                                <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                                    首页，更不用说进首页前三了。那么网站优...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="news_date l">
+                                <i>09</i>
+                                <span>Jan</span>
+                            </div>
+                            <div class="news_text l">
+                                <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                                <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                                    首页，更不用说进首页前三了。那么网站优...</p>
+                            </div>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div id="foot" class="fluid">
+            <div class="container">
+                <p class="l">Copyright 2006- 2014 Bowenshangmei Culture All Rights Reserved</p>
+                <ul class="r">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfollo</a></li>
+                    <li><a href="#" class="last">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
