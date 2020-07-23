@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>工商平台登录页面练习</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <style>
+        html,body {height: 100%;}
+
+        #main {height: 100%; background: #dddddd;}
+
+        #head {height: 60px; background: url(/img/gspt/head_bg.png);}
+        #head .head-content {width: 1000px; margin: 0 auto;}
+        #head .head-logo {height: 60px;}
+        #head .head-logo .title {font-size: 28px; display: inline-block; height: 60px; line-height: 60px;}
+        #head .head-logo .title:before {content: ''; display: inline-block; background: url(/img/gspt/head_img.png) no-repeat left center; background-size: cover; width: 55px; height: 53px;}
+
+        #body {height: 585px; background: #327fff url(/img/gspt/content_bg.png) no-repeat center 0; background-size: 100% 100%;}
+
+        #file {height: 186px; background: blue; padding: 15px;}
+        #file .rpwd input {display: none;}
+        #file .rpwd input:checked + div {background: url(/img/cwfxgk/checked.png) no-repeat 0 2px;}
+        #file .rpwd div {background: url(/img/cwfxgk/unchecked.png) no-repeat 0 2px; padding-left: 23px; cursor: pointer; color: white;}
+
+        #foot {height: 102px; background: #e0e0e0;}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="head" class="fluid">
+            <div class="head-content">
+                <div class="l head-logo">
+                    <span class="title">甘肃省工商网上登记注册服务系统</span>
+                </div>
+                <div class="r head-menu"></div>
+            </div>
+        </div>
+        <div id="body">
+
+        </div>
+        <div id="file">
+            <label class="rpwd">
+                <input type="checkbox">
+                <div>下次自动登录</div>
+            </label>
+        </div>
+        <div id="foot"></div>
+    </div>
+</body>
+</html>
