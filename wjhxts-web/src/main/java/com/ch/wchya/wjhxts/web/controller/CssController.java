@@ -73,4 +73,14 @@ public class CssController {
     public String youkulist() {
         return "css/zshe_bgplay";
     }
+
+    @GetMapping("/ani/study")
+    public String study() {
+        return "css/ani_study";
+    }
+
+    @GetMapping("/ani/loading")
+    public String loading() {
+        return "css/ani_loading";
+    }
 }
