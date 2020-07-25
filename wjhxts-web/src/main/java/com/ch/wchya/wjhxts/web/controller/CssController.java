@@ -83,4 +83,14 @@ public class CssController {
     public String loading() {
         return "css/ani_loading";
     }
+
+    @GetMapping("/ani3d/study")
+    public String study3d() {
+        return "css/ani3d_study";
+    }
+
+    @GetMapping("/ani3d/cube")
+    public String cube3d() {
+        return "css/ani3d_cube";
+    }
 }
