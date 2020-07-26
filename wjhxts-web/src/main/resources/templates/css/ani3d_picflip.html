@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d动画-照片翻转</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+        img {display: block;}
+        .container {width: 640px; height: 320px; margin: 100px auto; position: relative; perspective: 500px;}
+        .container div {width: 100%; height: 100%; position: absolute; transition: 1s; backface-visibility: hidden;}
+        .container div:first-child {transform: rotateY(0);}
+        .container div:last-child {transform: rotateY(-180deg);}
+
+        .container:hover div:first-child {transform: rotateY(180deg);}
+        .container:hover div:last-child {transform: rotateY(0);}
+
+        /*.parent{ width:640px; height:320px; margin: 30px auto; position: relative; perspective: 600px;}*/
+        /*.parent div{ width:100%; height:100%; position: absolute; left: 0; top: 0; backface-visibility: hidden; transition: .5s;}*/
+
+        /*.parent div:first-child{ transform: rotateY(0); }*/
+        /*.parent div:last-child{ transform: rotateY(-180deg);}*/
+
+        /*.parent:hover div:first-child{ transform: rotateY(180deg); }*/
+        /*.parent:hover div:last-child{ transform: rotateY(0);}*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><img src="/img/css/img1.jpg" alt=""></div>
+        <div><img src="/img/css/img2.jpg" alt=""></div>
+    </div>
+    <!--<div class="parent">-->
+        <!--<div>-->
+            <!--<img src="/img/css/img1.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<img src="/img/css/img2.jpg" alt="">-->
+        <!--</div>-->
+    <!--</div>-->
+</body>
+</html>

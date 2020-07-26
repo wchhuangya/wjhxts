@@ -98,4 +98,10 @@ public class CssController {
     public String rotatehouse() {
         return "css/ani3d_rotatehouse";
     }
+
+
+    @GetMapping("/ani3d/picflip")
+    public String picflip() {
+        return "css/ani3d_picflip";
+    }
 }
