@@ -93,4 +93,9 @@ public class CssController {
     public String cube3d() {
         return "css/ani3d_cube";
     }
+
+    @GetMapping("/ani3d/rotatehouse")
+    public String rotatehouse() {
+        return "css/ani3d_rotatehouse";
+    }
 }
