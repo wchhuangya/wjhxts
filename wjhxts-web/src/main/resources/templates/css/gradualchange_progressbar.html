@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变-进度条</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+        .progressbar {width: 300px; height: 20px; border: 1px solid black; margin: 300px auto; background-image: linear-gradient(to right
+        bottom, #999 25%, #080 25%, #080 50%, #999 50%, #999 75%, #080 75%); background-size: 20px; animation: move 2s infinite linear;}
+
+        @keyframes move {
+            0% {background-position: 0 0;}
+            100% {background-position: 300px 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="progressbar"></div>
+</body>
+</html>

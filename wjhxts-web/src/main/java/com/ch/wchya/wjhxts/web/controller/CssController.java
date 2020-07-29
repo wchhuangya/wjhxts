@@ -99,9 +99,13 @@ public class CssController {
         return "css/ani3d_rotatehouse";
     }
 
-
     @GetMapping("/ani3d/picflip")
     public String picflip() {
         return "css/ani3d_picflip";
+    }
+
+    @GetMapping("/gradualchange/progressbar")
+    public String ropic() {
+        return "css/gradualchange_progressbar";
     }
 }
