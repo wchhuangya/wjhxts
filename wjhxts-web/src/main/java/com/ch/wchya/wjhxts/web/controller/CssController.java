@@ -110,7 +110,12 @@ public class CssController {
     }
 
     @GetMapping("/gradualchange/progressbar")
-    public String ropic() {
+    public String progressbar() {
         return "css/gradualchange_progressbar";
+    }
+
+    @GetMapping("/boxshadow/xiaomi")
+    public String xiaomi() {
+        return "css/boxshadow_xiaomi";
     }
 }

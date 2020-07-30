@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子阴影-仿小米官网</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+        body {background: #f5f5f5;}
+        .container {width: 700px; margin: 150px auto; position: relative;}
+        .container img {display: inline-block; width: 232px; height: 300px; transition: .5s; position: absolute;}
+        .container img:last-child {left: 250px;}
+        .container img:hover {cursor: pointer; top: -3px; box-shadow: 0 10px 10px 3px #ddd;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/img/css/phone1.png" alt="">
+        <img src="/img/css/phone2.png" alt="">
+    </div>
+</body>
+</html>
