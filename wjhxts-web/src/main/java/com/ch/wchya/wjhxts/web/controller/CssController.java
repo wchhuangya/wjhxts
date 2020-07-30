@@ -104,6 +104,11 @@ public class CssController {
         return "css/ani3d_picflip";
     }
 
+    @GetMapping("/ani3d/turnpage")
+    public String turnpage() {
+        return "css/ani3d_turnpage";
+    }
+
     @GetMapping("/gradualchange/progressbar")
     public String ropic() {
         return "css/gradualchange_progressbar";
